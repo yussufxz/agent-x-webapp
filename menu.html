@@ -3,46 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - The Obsidian Grill</title>
+    <title>The Obsidian Grill - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background: linear-gradient(to right, #0f2027, #203a43, #2c5364) }
-        .navbar { backdrop-blur-md bg-white/10 }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
     </style>
 </head>
-<body class="text-gray-100">
-    <header class="navbar fixed top-0 w-full flex items-center justify-between p-4 bg-transparent backdrop-blur-md">
-        <div class="text-2xl font-bold">The Obsidian Grill</div>
-        <nav>
-            <ul class="flex space-x-8">
-                <li><a href="index.html" class="hover:text-gray-300 transition-all duration-500">Home</a></li>
-                <li><a href="menu.html" class="hover:text-gray-300 transition-all duration-500">Menu</a></li>
-                <li><a href="reservations.html" class="hover:text-gray-300 transition-all duration-500">Reservations</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="pt-24">
-        <section class="py-20">
-            <h1 class="text-5xl font-bold text-center hover:scale-105 hover:shadow-2xl transition-all duration-500">Our Exquisite Menu</h1>
-            <div class="mt-12 max-w-4xl mx-auto">
-                <div class="mb-8">
-                    <h2 class="text-3xl font-semibold mb-2">Steaks</h2>
-                    <ul class="space-y-2">
-                        <li class="flex justify-between hover:scale-105 transition-all duration-500">
-                            <span>Filet Mignon</span>
-                            <span>$30</span>
-                        </li>
-                        <li class="flex justify-between hover:scale-105 transition-all duration-500">
-                            <span>Ribeye</span>
-                            <span>$28</span>
-                        </li>
-                    </ul>
+<body class="bg-gradient-to-br from-gray-900 to-black text-white">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white bg-opacity-10 backdrop-blur-lg shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-6">
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="text-3xl font-bold text-gold-500 hover:text-gold-600 transition-all duration-500">The Obsidian Grill</a>
+                </div>
+                <div class="hidden md:flex space-x-10">
+                    <a href="index.html" class="text-white hover:text-gold-500 transition-all duration-500">Home</a>
+                    <a href="menu.html" class="text-white hover:text-gold-500 transition-all duration-500">Menu</a>
+                    <a href="reservations.html" class="text-white hover:text-gold-500 transition-all duration-500">Reservations</a>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-gradient-to-r from-gold-500 to-gold-700 opacity-75"></div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-6xl font-bold text-white mb-4">Our Exquisite Menu</h1>
+            <p class="text-lg text-white">Experience the pinnacle of culinary excellence.</p>
+        </div>
+    </section>
+
+    <!-- Menu Items -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-lg shadow-lg hover:scale-105 transition-all duration-500">
+                <h2 class="text-2xl font-bold text-gold-500 mb-4">Appetizers</h2>
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center">
+                        <span class="text-white">Truffle Arancini</span>
+                        <span class="text-gold-500">$18</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span class="text-white">Caviar Blinis</span>
+                        <span class="text-gold-500">$30</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-lg shadow-lg hover:scale-105 transition-all duration-500">
+                <h2 class="text-2xl font-bold text-gold-500 mb-4">Main Courses</h2>
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center">
+                        <span class="text-white">Wagyu Beef Steak</span>
+                        <span class="text-gold-500">$75</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span class="text-white">Lobster Thermidor</span>
+                        <span class="text-gold-500">$85</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-lg shadow-lg hover:scale-105 transition-all duration-500">
+                <h2 class="text-2xl font-bold text-gold-500 mb-4">Desserts</h2>
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center">
+                        <span class="text-white">Chocolate Fondant</span>
+                        <span class="text-gold-500">$15</span>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <span class="text-white">Crème Brûlée</span>
+                        <span class="text-gold-500">$12</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-80 backdrop-blur-lg py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-white">© 2023 The Obsidian Grill. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
