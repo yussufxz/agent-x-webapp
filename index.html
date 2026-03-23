@@ -1,1 +1,37 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>The Obsidian Grill | Home</title><link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"><style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');body {font-family: 'Roboto', sans-serif;}</style></head><body class="bg-gray-900 text-white"><header><nav class="bg-gray-800 p-4"><div class="container mx-auto flex justify-between items-center"><a href="index.html" class="text-2xl text-gold font-bold">The Obsidian Grill</a><div class="flex space-x-4"><a href="index.html" class="hover:text-gold transition ease-in-out duration-500">Home</a><a href="menu.html" class="hover:text-gold transition ease-in-out duration-500">Menu</a><a href="reservations.html" class="hover:text-gold transition ease-in-out duration-500">Reservations</a><a href="contact.html" class="hover:text-gold transition ease-in-out duration-500">Contact</a></div></div></nav></header><main><section class="hero bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?steak,restaurant')"><div class="text-center"><h1 class="text-6xl font-bold mb-4 text-gold">Welcome to The Obsidian Grill</h1><p class="text-lg text-gray-300">Experience luxury dining like never before</p></div></section></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Obsidian Grill</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .bg-dark { background-color: #1a1a1a; }
+        .text-gold { color: #d4af37; }
+        .highlight-on-hover:hover { transform: scale(1.05); }
+        .fade-in { opacity: 0; transition: opacity 0.5s ease-in-out; }
+        .fade-in.show { opacity: 1; }
+    </style>
+</head>
+<body class="bg-dark text-white">
+    <header class="fixed top-0 w-full bg-transparent backdrop-filter backdrop-blur-md shadow-md z-50">
+        <nav class="max-w-6xl mx-auto p-4 flex justify-between">
+            <a href="index.html" class="text-gold text-2xl font-bold">The Obsidian Grill</a>
+            <div>
+                <a href="index.html" class="mr-4 hover:text-gold transition">Home</a>
+                <a href="menu.html" class="mr-4 hover:text-gold transition">Menu</a>
+                <a href="reservations.html" class="hover:text-gold transition">Reservations</a>
+            </div>
+        </nav>
+    </header>
+    <main class="pt-24">
+        <section class="h-screen flex items-center justify-center text-center fade-in show">
+            <div>
+                <h1 class="text-gold text-6xl font-semibold mb-6">Welcome to The Obsidian Grill</h1>
+                <p class="text-xl mb-6">Experience luxury dining with our exquisite steak selections.</p>
+                <a href="reservations.html" class="px-8 py-4 bg-gold text-dark font-medium rounded-full shadow-md highlight-on-hover">Book a Table</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
