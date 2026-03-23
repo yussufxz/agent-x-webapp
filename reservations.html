@@ -1,77 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Obsidian Grill - Reservations</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-    h1, h2, h3 {
-      font-family: 'Playfair Display', serif;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Obsidian Grill - Reservations</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a, #333333, #4f4f4f);
+        }
+        .gold-gradient {
+            background: linear-gradient(45deg, #bfa145, #e0c068);
+        }
+    </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-screen">
-
-  <!-- Sticky Navigation Bar -->
-  <header class="sticky top-0 z-50 bg-black bg-opacity-50 backdrop-blur-md shadow-lg">
-    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-      <a href="index.html" class="text-3xl font-bold text-white hover:text-yellow-500 transition-all duration-500">The Obsidian Grill</a>
-      <ul class="flex space-x-8 text-lg">
-        <li><a href="index.html" class="hover:text-yellow-500 transition-all duration-500">Home</a></li>
-        <li><a href="menu.html" class="hover:text-yellow-500 transition-all duration-500">Menu</a></li>
-        <li><a href="reservations.html" class="text-yellow-500">Reservations</a></li>
-      </ul>
+<body class="gradient-bg text-white">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-lg bg-opacity-30 bg-black p-4 flex justify-between items-center">
+        <div class="text-2xl font-playfair font-bold">The Obsidian Grill</div>
+        <ul class="flex space-x-8">
+            <li><a href="index.html" class="hover:text-gold-gradient transition-all duration-500">Home</a></li>
+            <li><a href="menu.html" class="hover:text-gold-gradient transition-all duration-500">Menu</a></li>
+            <li><a href="reservations.html" class="hover:text-gold-gradient transition-all duration-500">Reservations</a></li>
+        </ul>
     </nav>
-  </header>
 
-  <!-- Reservation Section -->
-  <section class="container mx-auto py-20 px-6">
-    <div class="max-w-4xl mx-auto bg-white bg-opacity-5 backdrop-blur-md rounded-lg shadow-2xl p-10">
-      <h1 class="text-4xl font-bold text-center mb-8">Make a Reservation</h1>
-      <form class="space-y-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label for="name" class="block text-lg font-medium">Full Name</label>
-            <input type="text" id="name" class="w-full mt-2 p-3 rounded-lg bg-black bg-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-500" placeholder="Enter your full name">
-          </div>
-          <div>
-            <label for="email" class="block text-lg font-medium">Email Address</label>
-            <input type="email" id="email" class="w-full mt-2 p-3 rounded-lg bg-black bg-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-500" placeholder="Enter your email">
-          </div>
+    <!-- Hero Section -->
+    <header class="h-screen flex items-center justify-center relative">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="relative z-10 text-center">
+            <h1 class="text-5xl md:text-7xl font-playfair font-bold mb-4">Welcome to The Obsidian Grill</h1>
+            <p class="text-lg md:text-2xl mb-8">Where luxury meets culinary excellence</p>
+            <a href="reservations.html" class="inline-block bg-gold-gradient text-black py-3 px-6 rounded-full text-lg font-medium hover:scale-105 transition-all duration-500 shadow-lg">
+                Make a Reservation
+            </a>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label for="date" class="block text-lg font-medium">Reservation Date</label>
-            <input type="date" id="date" class="w-full mt-2 p-3 rounded-lg bg-black bg-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-500">
-          </div>
-          <div>
-            <label for="time" class="block text-lg font-medium">Time</label>
-            <input type="time" id="time" class="w-full mt-2 p-3 rounded-lg bg-black bg-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-500">
-          </div>
-        </div>
-        <div>
-          <label for="guests" class="block text-lg font-medium">Number of Guests</label>
-          <input type="number" id="guests" class="w-full mt-2 p-3 rounded-lg bg-black bg-opacity-30 text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 transition-all duration-500" min="1" max="20" placeholder="Enter number of guests">
-        </div>
-        <div class="text-center">
-          <button type="submit" class="mt-6 px-8 py-3 bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-bold rounded-full shadow-lg hover:scale-105 transition-all duration-500">Reserve Now</button>
-        </div>
-      </form>
-    </div>
-  </section>
+    </header>
 
-  <!-- Footer -->
-  <footer class="bg-black bg-opacity-50 backdrop-blur-md py-8">
-    <div class="container mx-auto text-center">
-      <p class="text-lg">&copy; 2023 The Obsidian Grill. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- About Section -->
+    <section class="py-20 px-4 md:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="backdrop-blur-lg bg-opacity-30 bg-black p-6 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-playfair font-bold mb-4">About Us</h2>
+                <p class="text-lg">At The Obsidian Grill, we offer an unparalleled dining experience with our exquisite menu crafted by world-renowned chefs. Our restaurant combines modern luxury with a touch of elegance to provide an unforgettable atmosphere.</p>
+            </div>
+            <img src="your-image-url.jpg" alt="Luxury Dining" class="rounded-lg shadow-lg hover:scale-105 transition-all duration-500">
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2023 The Obsidian Grill. All rights reserved.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-gold-gradient transition-all duration-500"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-gold-gradient transition-all duration-500"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-gold-gradient transition-all duration-500"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
